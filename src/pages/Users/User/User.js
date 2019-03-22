@@ -4,7 +4,7 @@ import {Divider,Form,Popconfirm,Button,Card, Row, Col,Select,Input} from "antd";
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import StandardTable from '@/components/StandardTable';
 import UserForm from "./UserForm";
-
+import styles from './User.less'
 class User extends Component {
 
   constructor(props){
@@ -60,6 +60,13 @@ class User extends Component {
   state = {
 
   }
+
+  handleAdd = fields => {
+    const { dispatch } = this.props;
+    const { isEdit } = this.state;
+
+
+  };
 
   handleModalVisible = flag => {
     this.setState(prevState => {
@@ -184,8 +191,8 @@ class User extends Component {
     return (
       <PageHeaderWrapper title="用户管理" hiddenBreadcrumb>
         <Card bordered={false}>
-          <div>
-            <div>
+          <div className={styles.tableList}>
+            <div className={styles.tableListOperator}>
               <Button icon="plus" type="primary" onClick={()=>this.handleModalVisible(true)}>新增</Button>
             </div>
             <StandardTable
@@ -193,6 +200,7 @@ class User extends Component {
               useRowSelection={false}
               data={data}
               columns={columns}
+              rowSelection={false}
             />
           </div>
         </Card>
@@ -202,6 +210,7 @@ class User extends Component {
           modalVisible={modalVisible}
           isEdit={isEdit}
           formData={currentFormData}
+
         />
       </PageHeaderWrapper>
     );
