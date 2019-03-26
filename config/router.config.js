@@ -71,6 +71,65 @@ export default [
 
         ],
       },
+      {
+
+        path: '/hospital',
+        name: 'hospital',
+        icon: 'user',
+        routes:[
+          {
+            path: '/hospital/regions',
+            name: 'regions',
+            component: './Hospital/Regions',
+          },
+          {
+            path: '/hospital/services',
+            name: 'services',
+            component: './Hospital/Services',
+          },
+          {
+            path: '/hospital/deparment',
+            name: 'deparment',
+            component: './Hospital/Department',
+          },
+          {
+            path: '/hospital/areas',
+            name: 'areas',
+            component: './Hospital/Areas',
+          },
+          {
+            path: '/hospital/information',
+            name: 'information',
+            component: './Hospital/Information',
+          },
+
+        ],
+      },
+      // {
+
+      //   path: '/stock',
+      //   name: 'stock',
+      //   icon: 'user',
+      //   routes:[
+      //     {
+      //       path: '/stock/supl',
+      //       name: 'regions',
+      //       component: './Hospital/Regions',
+      //     },
+      //     {
+      //       path: '/stock/services',
+      //       name: 'services',
+      //       component: './Hospital/Services',
+      //     },
+      //     {
+      //       path: '/stock/deparment',
+      //       name: 'deparment',
+      //       component: './Hospital/Deparment',
+      //     },
+
+
+      //   ],
+      // },
       // // forms
       // {
       //   path: '/form',
